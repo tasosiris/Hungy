@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet" />
+  <link href="fontawesome/css/all.min.css" rel="stylesheet" />
+  <link href="css/tooplate-chilling-cafe.css" rel="stylesheet" />
+  <style>
+    .btn {
+      border: none;
+      background-color: inherit;
+      padding: 8px 14px;
+      font-size: 16px;
+      display: inline-block;
+      border-radius: 9px;
+      transition: 0.2s;
+    }
+
+    /* Green */
+    .green {
+      color: green;
+    }
+
+    .green:hover {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    /* Orange */
+    .orange {
+      color: white;
+      background: #ff9800;
+      text-align: right;
+      font-weight: 400;
+      font-size: 1.5rem;
+      margin-left: 40%;
+      font-weight: bold;
+    }
+
+    .orange:hover {
+      background: #FAF0E6;
+      color: #ff9800;
+
+    }
+
+    /* Red */
+    .red {
+      color: red;
+    }
+
+    .red:hover {
+      background: #f44336;
+      color: white;
+    }
+
+    /* Gray */
+    .gray {
+      color: black;
+    }
+
+    .gray:hover {
+      background: white;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="tm-container">
+    <div class="tm-text-white tm-page-header-container">
+      <i class="fas fa-mug-hot fa-2x tm-page-icon"></i>
+      <h1 class="tm-page-header">Name of the store</h1>
+      <!--restaurant name-->
+    </div>
+    <div class="tm-main-content">
+      <div id="tm-intro-img"></div>
+      <!-- Coffee Menu -->
+      <section class="tm-section">
+        <h2 class="tm-section-header">Popular</h2>
+        <div class="tm-responsive-table" id="lc">
+          <table>
+            <tr>
+              <!--1-->
+              <td class="tm-text-left"> <label id="food1"> </label> <label>$</label></label><label id="price1"></label>
+              </td>
+              <td><button onclick="minus1()" class="btn gray">-</button></td>
+              <td id="q1"></td>
+              <td><button onclick="plus1()" class="btn gray">+</button></td>
+            </tr>
+            <tr>
+              <!--2-->
+              <td class="tm-text-left"> <label id="food2"> </label> <label>$</label><label id="price2"></label> </td>
+              <td><button onclick="minus2()" class="btn gray">-</button></td>
+              <td id="q2"></td>
+              <td><button onclick="plus2()" class="btn gray">+</button></td>
+            </tr>
+            <tr>
+              <!--3-->
+              <td class="tm-text-left"> <label id="food3"> </label> <label>$</label></label><label id="price3"></label>
+              </td>
+              <td><button onclick="minus3()" class="btn gray">-</button></td>
+              <td id="q3"></td>
+              <td><button onclick="plus3()" class="btn gray">+</button></td>
+            </tr>
+            <tr>
+              <!--4-->
+              <td class="tm-text-left"> <label id="food4"> </label> <label>$</label></label><label id="price4"></label>
+              </td>
+              <td><button onclick="minus4()" class="btn gray">-</button></td>
+              <td id="q4"></td>
+              <td><button onclick="plus4()" class="btn gray">+</button></td>
+            </tr>
+            <tr>
+              <!--5-->
+              <td class="tm-text-left"> <label id="food5"> </label> <label>$</label></label><label id="price5"></label>
+              </td>
+              <td><button onclick="minus5()" class="btn gray">-</button></td>
+              <td id="q5"></td>
+              <td><button onclick="plus5()" class="btn gray">+</button></td>
+            </tr>
+            <tr>
+              <!--6-->
+              <td class="tm-text-left"> <label id="food6"> </label> <label>$</label></label><label id="price6"></label>
+              </td>
+              <td><button onclick="minus6()" class="btn gray">-</button></td>
+              <td id="q6"></td>
+              <td><button onclick="plus6()" class="btn gray">+</button></td>
+            </tr>
+            <tr>
+              <!--7-->
+              <td class="tm-text-left"> <label id="food7"> </label> <label>$</label></label><label id="price7"></label>
+              </td>
+              <td><button onclick="minus7()" class="btn gray">-</button></td>
+              <td id="q7"></td>
+              <td><button onclick="plus7()" class="btn gray">+</button></td>
+            </tr>
+          </table>
+        </div>
+      </section>
+
+      <!-- Tea Menu -->
+      <section class="tm-section">
+        <h2 class="tm-section-header">Tea Menu</h2>
+        <div class="tm-responsive-table">
+          <table>
+            <tr>
+              <!--8-->
+              <td class="tm-text-left"> <label id="food8"> </label> <label>$</label></label><label id="price8"></label>
+              </td>
+              <td> </td>
+              <td></td>
+              <td></td>
+              <td><button onclick="minus8()" class="btn gray">-</button></td>
+              <td id="q8"></td>
+              <td><button onclick="plus8()" class="btn gray">+</button></td>
+            </tr>
+            <tr>
+              <!--9-->
+              <td class="tm-text-left"> <label id="food9"> </label> <label>$</label></label><label id="price9"></label>
+              </td>
+              <td> </td>
+              <td></td>
+              <td></td>
+              <td><button onclick="minus9()" class="btn gray">-</button></td>
+              <td id="q9"></td>
+              <td><button onclick="plus9()" class="btn gray">+</button></td>
+            </tr>
+            <tr>
+              <!--10-->
+              <td class="tm-text-left"> <label id="food10"> </label> <label>$</label></label><label
+                  id="price10"></label> </td>
+              <td> </td>
+              <td></td>
+              <td></td>
+              <td><button onclick="minus10()" class="btn gray">-</button></td>
+              <td id="q10"></td>
+              <td><button onclick="plus10()" class="btn gray">+</button></td>
+            </tr>
+            <tr>
+              <!--11-->
+              <td class="tm-text-left"> <label id="food11"> </label> <label>$</label></label><label
+                  id="price11"></label> </td>
+              <td> </td>
+              <td></td>
+              <td></td>
+              <td><button onclick="minus11()" class="btn gray">-</button></td>
+              <td id="q11"></td>
+              <td><button onclick="plus11()" class="btn gray">+</button></td>
+            </tr>
+            <tr>
+              <!--12-->
+              <td class="tm-text-left"> <label id="food12"> </label> <label>$</label></label><label
+                  id="price12"></label> </td>
+              <td> </td>
+              <td></td>
+              <td></td>
+              <td><button onclick="minus12()" class="btn gray">-</button></td>
+              <td id="q12"></td>
+              <td><button onclick="plus12()" class="btn gray">+</button></td>
+            </tr>
+            <tr>
+              <!--13-->
+              <td class="tm-text-left"> <label id="food13"> </label> <label>$</label></label><label
+                  id="price13"></label> </td>
+              <td> </td>
+              <td></td>
+              <td></td>
+              <td><button onclick="minus13()" class="btn gray">-</button></td>
+              <td id="q13"></td>
+              <td><button onclick="plus13()" class="btn gray">+</button></td>
+            </tr>
+          </table>
+        </div>
+      </section>
+      <hr />
+
+
+      <section class="tm-section tm-section-small">
+        <h2 class="tm-text-Total">Your Total: <label>$</label><label id="total"> </label>
+          <button class="btn orange">Submit Order</button>
+        </h2>
+
+      </section>
+      <hr />
+
+
+
+      <!-- About our site -->
+      <section class="tm-section tm-section-small">
+        <h2 class="tm-section-header">About our cafe</h2>
+        <p>
+          Hungy is an online site which provide an online menu that can be
+          accessed with a qr code.
+        </p>
+        <p class="tm-mb-0">
+          If you want to order from your table please submit your order
+          pressing the button below.Thank you.
+        </p>
+      </section>
+      <hr />
+      <!-- Talk to us -->
+      <section class="tm-section tm-section-small">
+        <h2 class="tm-section-header">Talk to us</h2>
+        <p class="tm-mb-0">
+          Reach us via
+          <a href="mailto:info@example.com" class="tm-contact-link">Email</a>
+          or follow us on social icons below. Thank you.
+        </p>
+        <div class="tm-social-icons">
+          <div class="tm-social-link-container">
+            <a href="https://fb.com/tooplate" class="tm-social-link">
+              <i class="fab fa-facebook"></i>
+            </a>
+          </div>
+          <div class="tm-social-link-container">
+            <a href="https://twitter.com" class="tm-social-link">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+          <div class="tm-social-link-container">
+            <a href="https://instagram.com" class="tm-social-link">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+          <div class="tm-social-link-container">
+            <a href="https://pinterest.com" class="tm-social-link">
+              <i class="fab fa-pinterest"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <p class="tm-text-white tm-footer-text">
+        Copyright &copy; 2020 Hungy
+
+      </p>
+    </footer>
+  </div>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script>
+    //popular
+
+
+    var food = [
+      "Americano",
+      "Cuppucino",
+      "Fresh Latte",
+      "Mocha",
+      "Espresso",
+      "Black Coffee",
+      "Double Shot Expresso",
+      "Pure White Milk",
+      "Hong Kong Tea",
+      "Taiwan Tea",
+      "Bubble Tea",
+      "Mixed Fruit Tea",
+      "Original Tea"]
+
+
+    document.getElementById("food1").innerHTML = food[0];
+    document.getElementById("food2").innerHTML = food[1];
+    document.getElementById("food3").innerHTML = food[2];
+    document.getElementById("food4").innerHTML = food[3];
+    document.getElementById("food5").innerHTML = food[4];
+    document.getElementById("food6").innerHTML = food[5];
+    document.getElementById("food7").innerHTML = food[6];
+    document.getElementById("food8").innerHTML = food[7];
+    document.getElementById("food9").innerHTML = food[8];
+    document.getElementById("food10").innerHTML = food[9];
+    document.getElementById("food11").innerHTML = food[10];
+    document.getElementById("food12").innerHTML = food[11];
+    document.getElementById("food13").innerHTML = food[12];
+
+    var price = [
+      10,
+      15,
+      10,
+      15,
+      18,
+      15,
+      20,
+      5,
+      8,
+      4,
+      8,
+      10,
+      12]
+
+    document.getElementById("price1").innerHTML = price[0];
+    document.getElementById("price2").innerHTML = price[1];
+    document.getElementById("price3").innerHTML = price[2];
+    document.getElementById("price4").innerHTML = price[3];
+    document.getElementById("price5").innerHTML = price[4];
+    document.getElementById("price6").innerHTML = price[5];
+    document.getElementById("price7").innerHTML = price[6];
+    document.getElementById("price8").innerHTML = price[7];
+    document.getElementById("price9").innerHTML = price[8];
+    document.getElementById("price10").innerHTML = price[9];
+    document.getElementById("price11").innerHTML = price[10];
+    document.getElementById("price12").innerHTML = price[11];
+    document.getElementById("price13").innerHTML = price[12];
+
+
+    var q = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    document.getElementById("q1").innerHTML = q[0];
+    document.getElementById("q2").innerHTML = q[1];
+    document.getElementById("q3").innerHTML = q[2];
+    document.getElementById("q4").innerHTML = q[3];
+    document.getElementById("q5").innerHTML = q[4];
+    document.getElementById("q6").innerHTML = q[5];
+    document.getElementById("q7").innerHTML = q[6];
+    document.getElementById("q8").innerHTML = q[7];
+    document.getElementById("q9").innerHTML = q[8];
+    document.getElementById("q10").innerHTML = q[9];
+    document.getElementById("q11").innerHTML = q[10];
+    document.getElementById("q12").innerHTML = q[11];
+    document.getElementById("q13").innerHTML = q[12];
+
+
+
+    var press = 0;
+    var total = 0;
+
+    function add() {
+
+      total =
+        (price[0] * q[0]) +
+        (price[1] * q[1]) +
+        (price[2] * q[2]) +
+        (price[3] * q[3]) +
+        (price[4] * q[4]) +
+        (price[5] * q[5]) +
+        (price[6] * q[6]) +
+        (price[7] * q[7]) +
+        (price[8] * q[8]) +
+        (price[9] * q[9]) +
+        (price[10] * q[10]) +
+        (price[11] * q[11]) +
+        (price[12] * q[12]);
+
+
+      document.getElementById("total").innerHTML = total;
+
+
+
+    }
+
+    //--------------------------------------------------------
+    function minus1() {
+      if (q[0] > 0) {
+        q[0]--;
+        document.getElementById("q1").innerHTML = q[0];
+        press = 1;
+        add();
+      }
+
+    }
+    function plus1() {
+      q[0]++;
+      document.getElementById("q1").innerHTML = q[0];
+      press = 1;
+      add();
+    }
+    //--------------------------------------------------------
+    function minus2() {
+      if (q[1] > 0) {
+        q[1]--;
+        document.getElementById("q2").innerHTML = q[1];
+        press = 1;
+        add();
+      }
+
+    }
+    function plus2() {
+      q[1]++;
+      document.getElementById("q2").innerHTML = q[1];
+      press = 1;
+      add();
+    }
+    //--------------------------------------------------------
+    function minus3() {
+      if (q[2] > 0) {
+        q[2]--;
+        document.getElementById("q3").innerHTML = q[2];
+        press = 1;
+        add();
+      }
+
+    }
+    function plus3() {
+      q[2]++;
+      document.getElementById("q3").innerHTML = q[2];
+      press = 1;
+      add();
+    }
+    //--------------------------------------------------------
+    function minus4() {
+      if (q[3] > 0) {
+        q[3]--;
+        document.getElementById("q4").innerHTML = q[3];
+        press = 1;
+        add();
+      }
+
+    }
+    function plus4() {
+      q[3]++;
+      document.getElementById("q4").innerHTML = q[3];
+      press = 1;
+      add();
+    }
+    //--------------------------------------------------------
+    function minus5() {
+      if (q[4] > 0) {
+        q[4]--;
+        document.getElementById("q5").innerHTML = q[4];
+        press = 1;
+        add();
+      }
+
+    }
+    function plus5() {
+      q[4]++;
+      document.getElementById("q5").innerHTML = q[4];
+      press = 1;
+      add();
+    }
+    //--------------------------------------------------------
+    function minus6() {
+      if (q[5] > 0) {
+        q[5]--;
+        document.getElementById("q6").innerHTML = q[5];
+        press = 1;
+        add();
+      }
+
+    }
+    function plus6() {
+      q[5]++;
+      document.getElementById("q6").innerHTML = q[5];
+      press = 1;
+      add();
+    }
+    //--------------------------------------------------------
+    function minus7() {
+      if (q[6] > 0) {
+        q[6]--;
+        document.getElementById("q7").innerHTML = q[6];
+        press = 1;
+        add();
+      }
+
+    }
+    function plus7() {
+      q[6]++;
+      document.getElementById("q7").innerHTML = q[6];
+      press = 1;
+      add();
+    }
+    //--------------------------------------------------------
+    function minus8() {
+      if (q[7] > 0) {
+        q[7]--;
+        document.getElementById("q8").innerHTML = q[7];
+        press = 1;
+        add();
+      }
+
+    }
+    function plus8() {
+      q[7]++;
+      document.getElementById("q8").innerHTML = q[7];
+      press = 1;
+      add();
+    }
+    //--------------------------------------------------------
+    function minus9() {
+      if (q[8] > 0) {
+        q[8]--;
+        document.getElementById("q9").innerHTML = q[8];
+        press = 1;
+        add();
+      }
+
+    }
+    function plus9() {
+      q[8]++;
+      document.getElementById("q9").innerHTML = q[8];
+      press = 1;
+      add();
+    }
+    //--------------------------------------------------------
+    function minus10() {
+      if (q[9] > 0) {
+        q[9]--;
+        document.getElementById("q10").innerHTML = q[9];
+        press = 1;
+        add();
+      }
+
+    }
+    function plus10() {
+      q[9]++;
+      document.getElementById("q10").innerHTML = q[9];
+      press = 1;
+      add();
+    }
+    //--------------------------------------------------------
+    function minus11() {
+      if (q[10] > 0) {
+        q[10]--;
+        document.getElementById("q11").innerHTML = q[10];
+        press = 1;
+        add();
+      }
+
+    }
+    function plus11() {
+      q[10]++;
+      document.getElementById("q11").innerHTML = q[10];
+      press = 1;
+      add();
+    }
+    //--------------------------------------------------------
+    function minus12() {
+      if (q[11] > 0) {
+        q[11]--;
+        document.getElementById("q12").innerHTML = q[11];
+        press = 1;
+        add();
+      }
+
+    }
+    function plus12() {
+      q[11]++;
+      document.getElementById("q12").innerHTML = q[11];
+      press = 1;
+      add();
+    }
+    //--------------------------------------------------------
+    function minus13() {
+      if (q[12] > 0) {
+        q[12]--;
+        document.getElementById("q13").innerHTML = q[12];
+        press = 1;
+        add();
+      }
+
+    }
+    function plus13() {
+      q[12]++;
+      document.getElementById("q13").innerHTML = q[12];
+      press = 1;
+      add();
+    }
+//--------------------------------------------------------
+
+
+  </script>
+</body>
+
+</html>
